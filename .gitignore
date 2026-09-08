@@ -1,0 +1,7 @@
+*.vdi
+*.vmdk
+*.ova
+*.iso
+*.log
+*.pcap
+.env
