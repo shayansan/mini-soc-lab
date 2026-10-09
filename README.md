@@ -1,33 +1,46 @@
-# mini SOC Lab
+# Mini SOC Lab
 
-## project goal 
+A hands-on SOC lab built with Kali Linux, Windows 11, Sysmon, Windows Defender Firewall, and Wazuh.
 
-in this project i want to build a victim machine and make some security logs in that machine,
+## Goal
 
-and then collect them with Wazuh, detect suspicious activities and investigate on alerts.
+The goal of this project is to simulate suspicious activity, collect telemetry, detect malicious behavior, investigate alerts, and document incidents.
 
-in the final part i will write a professional incident report for my diagnoses.
+## Lab Architecture
 
-##required skills 
+- Kali Linux attacker: 192.168.70.10
+- Windows 11 victim: 192.168.70.20
+- Wazuh SIEM server: 192.168.70.30
 
-Linux / windows 
+The lab uses a VirtualBox Host-only network:
 
-Logging
+192.168.70.0/24
 
-Networking
+Each virtual machine also has a NAT adapter for Internet access.
 
-SIEM
+## Telemetry Sources
 
-Detection 
+- Windows Event Logs
+- Sysmon
+- Windows Defender Firewall logs
+- Wazuh File Integrity Monitoring
+- Wazuh Security Configuration Assessment
 
-Threat investigation
+## Verified Sysmon Events
 
-Incident response 
+- Event ID 1 — Process Create
+- Event ID 3 — Network Connection
+- Event ID 11 — File Create
+- Event ID 12 — Registry Object Create/Delete
+- Event ID 13 — Registry Value Set
+- Event ID 22 — DNS Query
 
-Documentation 
+## First Detection Scenario
 
-## Security Monitoring Workflow
+Kali performs an Nmap scan against the Windows victim.
 
-Attacker => Victim => Telemetry => Wazush/SIEM => Detection => investigation => incident report
+Example:
 
+```bash
+nmap -Pn -p 135,139,445,5040,49664-49673 --reason 192.168.70.20
 

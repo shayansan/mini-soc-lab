@@ -1,0 +1,15 @@
+<group name="mini_soc,windows_firewall,reconnaissance,">
+
+  <rule id="100100" level="10" frequency="8" timeframe="10">
+    <if_matched_sid>4101</if_matched_sid>
+    <same_srcip />
+    <description>Possible TCP port scan detected from source IP $(srcip)</description>
+
+    <mitre>
+      <id>T1046</id>
+    </mitre>
+
+    <group>network_scan,reconnaissance,windows_firewall,</group>
+  </rule>
+
+</group>
