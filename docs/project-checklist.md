@@ -38,6 +38,11 @@
 - [x] Create custom detection rule
 - [x] Trigger custom detection
 - [x] Map detection to MITRE ATT&CK T1046
+- [x] Detect whoami execution
+- [x] Detect ipconfig execution
+- [x] Detect tasklist execution
+- [x] Correlate Windows discovery activity
+- [x] Map discovery behavior to MITRE ATT&CK
 
 ## Phase 5 — Investigation
 
@@ -45,9 +50,10 @@
 - [x] Identify victim destination IP
 - [x] Inspect source/destination ports
 - [x] Analyze detection rule
-- [ ] Build full event timeline
-- [ ] Determine tuning requirements
-- [ ] Perform additional investigation scenarios
+- [x] Build Windows discovery event timeline
+- [x] Identify common parent process
+- [x] Identify common user session
+- [x] Classify authorized simulation as True Positive
 
 ## Phase 6 — Incident Documentation
 

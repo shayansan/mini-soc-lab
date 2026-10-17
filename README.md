@@ -44,3 +44,14 @@ Example:
 ```bash
 nmap -Pn -p 135,139,445,5040,49664-49673 --reason 192.168.70.20
 
+## Second Detection Scenario — Windows Discovery Sequence
+
+A second detection scenario was created to identify rapid Windows discovery activity.
+
+The following commands were executed on the Windows victim:
+
+```text
+whoami
+net user
+ipconfig /all
+tasklist
