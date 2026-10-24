@@ -1,0 +1,12 @@
+<group name="local,persistence,windows,registry,">
+
+  <rule id="100106" level="10">
+    <if_sid>92300</if_sid>
+    <description>Possible registry Run key persistence detected</description>
+    <mitre>
+      <id>T1547.001</id>
+    </mitre>
+    <group>persistence,windows,registry,run_key,</group>
+  </rule>
+
+</group>
