@@ -545,3 +545,9 @@ Possible future extensions include:
 All activity in this repository was performed in an isolated lab environment for educational and defensive security purposes.
 
 No unauthorized systems were targeted.
+
+## Final Project Report
+
+A complete summary of the lab, detection scenarios, investigation methodology, lessons learned, and future improvements is available here:
+
+[Final SOC Summary](docs/final-soc-summary.md)

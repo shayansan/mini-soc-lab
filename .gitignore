@@ -5,3 +5,8 @@
 *.log
 *.pcap
 .env
+*.log
+*.pcap~
+.DS_Store
+Thumbs.db
+*.tmp
