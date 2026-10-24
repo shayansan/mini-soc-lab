@@ -1,0 +1,13 @@
+<group name="local,execution,powershell,windows,">
+
+  <rule id="100107" level="10">
+    <if_sid>92027</if_sid>
+    <field name="win.eventdata.commandLine" type="pcre2">(?i)-ExecutionPolicy\s+Bypass</field>
+    <description>Suspicious PowerShell execution with ExecutionPolicy Bypass detected</description>
+    <mitre>
+      <id>T1059.001</id>
+    </mitre>
+    <group>execution,powershell,windows,suspicious_command,</group>
+  </rule>
+
+</group>
