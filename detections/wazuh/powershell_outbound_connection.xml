@@ -1,0 +1,13 @@
+<group name="local,network,powershell,windows,">
+
+  <rule id="100110" level="10">
+    <if_sid>92101</if_sid>
+    <field name="win.eventdata.initiated">^true$</field>
+    <description>Outbound TCP network connection initiated by PowerShell</description>
+    <mitre>
+      <id>T1095</id>
+    </mitre>
+    <group>network,powershell,windows,outbound_connection,</group>
+  </rule>
+
+</group>
