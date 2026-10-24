@@ -1,0 +1,13 @@
+<group name="local,file_creation,powershell,windows,">
+
+  <rule id="100108" level="12">
+    <if_sid>92213</if_sid>
+    <field name="win.eventdata.image" type="pcre2">(?i)\\powershell\.exe$</field>
+    <description>PowerShell created an executable file in a temporary directory</description>
+    <mitre>
+      <id>T1105</id>
+    </mitre>
+    <group>file_creation,powershell,windows,temp,dropper_like,</group>
+  </rule>
+
+</group>
